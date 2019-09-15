@@ -13,6 +13,10 @@ apt-get install -y -f
 apt-get install -y x11-common libx11-xcb1 libasound2
 apt-get clean
 
+$runscript
+
+/usr/bin/code
+
 
 
 
