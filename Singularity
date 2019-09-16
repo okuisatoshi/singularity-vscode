@@ -1,6 +1,7 @@
 Bootstrap:docker
 From: ubuntu:bionic
 
+
 %post
 
 apt-get update
@@ -10,12 +11,13 @@ wget https://go.microsoft.com/fwlink/?LinkID=760868 -O /tmp/vscode.deb
 
 dpkg -i /tmp/vscode.deb || true
 apt-get install -y -f
-apt-get install -y x11-common libx11-xcb1 libasound2
+apt-get install -y libx11-xcb1 libasound2 # x11-common
 apt-get clean
 
-#$runscript
-#
-#/usr/bin/code
+
+%runscript
+
+/usr/bin/code
 
 
 
