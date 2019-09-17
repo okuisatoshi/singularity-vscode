@@ -14,6 +14,8 @@ apt-get install -y -f
 apt-get install -y libx11-xcb1 libasound2 # x11-common
 apt-get clean
 
+mkdir /run/user
+chmod a+rwx /run/user
 
 %runscript
 
