@@ -14,9 +14,11 @@ apt-get install -y -f
 apt-get install -y libx11-xcb1 libasound2 # x11-common
 apt-get clean
 
-mkdir -p /run/user/683402166
-chmod a+rwx /run/user
-chmod a+rwx /run/user/683402166
+# Remove this dirty hack depending on my uid.
+# Use singularity run -B /run ... instead.
+#mkdir -p /run/user/683402166
+#chmod a+rwx /run/user
+#chmod a+rwx /run/user/683402166
 
 %runscript
 
